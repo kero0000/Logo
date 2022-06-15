@@ -118,6 +118,7 @@ const Spinner = styled.div`
   }
 `
 const publishableKey = `${process.env.REACT_APP_STRIPE_KEY}`
+console.log(publishableKey)
 const stripePromise = loadStripe(publishableKey)
 
 const CheckOut = () => {
