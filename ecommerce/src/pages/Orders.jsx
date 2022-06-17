@@ -89,7 +89,6 @@ const Orders = () => {
         const getProducts = async (accessToken, id) => {
             try{
                 const userRequest = axios.create({baseURL:"https://logo-ecommerce-app.herokuapp.com/api/",headers:{token:`Bearer ${accessToken}`}})
-                console.log(id)
                 const res = await userRequest.get(`/orders/find/${id}`)
                 setOrders(res.data)
                 setisLoading(false);
