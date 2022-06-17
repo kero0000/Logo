@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 import styled from "styled-components"
 import Announcement from "../components/Announcement"
 import Navbar from "../components/Navbar"
-import { getOrder } from "../redux/apiCalls";
-import { userRequest } from "../requestMethods";
 import { mobile } from "../responsive";
 
 const Container = styled.div``
@@ -37,23 +35,7 @@ const TopButton = styled.button`
     }
 
 `
-const TopTexts = styled.div`
-${mobile({ display: "none"})}`
 
-const TopText=styled.span`
-    text-decoration:underline;
-    cursor:pointer;
-    margin:0px 10px;
-`
-const Bottom = styled.div`
-    display:flex;
-    justify-content:space-between;
-    ${mobile({ flexDirection: "column"})}
-`
-
-const Info=styled.div`
-    flex:3;
-`
 const Order=styled.div`
     display:flex;
     justify-content:space-between;
