@@ -210,9 +210,6 @@ const Payment = () => {
                 margin-bottom: 24px;}\
                 "} 
                 </style>
-          <div>Address</div>
-            <Input id= "address" type="text" placeholder="Address..." onChange={(e)=>setAddress(e.target.value)}/>
-          <div>Postal Code</div>
           <Input id="postalcode" type="text" placeholder="Postal Code"/>
           <Button disabled={isLoading || !stripe || !elements} id="submit">
             <span id="button-text">
