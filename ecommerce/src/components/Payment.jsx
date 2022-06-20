@@ -210,7 +210,6 @@ const Payment = () => {
                 margin-bottom: 24px;}\
                 "} 
                 </style>
-          <Input id="postalcode" type="text" placeholder="Postal Code"/>
           <Button disabled={isLoading || !stripe || !elements} id="submit">
             <span id="button-text">
               {isLoading ? <Spinner></Spinner> : "Pay now"}
