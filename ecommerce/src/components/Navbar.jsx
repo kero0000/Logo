@@ -124,11 +124,16 @@ const Navbar = ()=> {
                         <>
                             <Avatar src="/broken-image.jpg" onClick={handleAvatar} style={{cursor:"pointer"}}/></>
                         }   
-                    <MenuItem>
+                    {!userPresent && 
+                        <>
+                        <MenuItem>
                         <Badge badgeContent={cartQuantity} color ="primary" onClick={handleCart}>
                             <ShoppingCartOutlinedIcon/>
                     </Badge>
                     </MenuItem>
+                    </>
+                    }
+
                 </Right>
             </Wrapper>
 
