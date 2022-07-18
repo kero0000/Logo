@@ -7,8 +7,7 @@ const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = requir
 router.post("/", verifyToken, async(req, res) => {
     const newOrder = new Order({userId:req.body.userId,
                                 products:req.body.products,
-                                amount:req.body.amount,
-                                address:req.body.address});
+                                amount:req.body.amount});
 
 
     try{
