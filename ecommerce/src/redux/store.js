@@ -16,6 +16,7 @@ import {
     PURGE,
     REGISTER} from "redux-persist";
   import storage from "redux-persist/lib/storage";
+import checkoutRedux from "./checkoutRedux";
 
   const persistConfig = {
     key: "root",
@@ -23,7 +24,7 @@ import {
     storage,
   };
   // turns object whose values are different reducing functions into a single reducing function to pass to createStore
-  const rootReducer = combineReducers({user: userReducer, cart:cartReducer, wishlist:wishlistReducer});
+  const rootReducer = combineReducers({user: userReducer, cart:cartReducer, wishlist:wishlistReducer, checkout:checkoutRedux});
   const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 // configureStore combines slice reducers and add redux middleware supplied

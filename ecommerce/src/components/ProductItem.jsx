@@ -69,8 +69,13 @@ const ProductItem= ({item})=> {
     const index = wishlist.products.find(x => x._id === item._id)
     const [inWishlist, setinWishlist] = useState(index !== undefined);
     const dispatch = useDispatch()
+    const user = useSelector(state => state.user.currentUser)
 
     const handleFavourite = (x) => {
+        if(user === null){
+            alert("please create an account to bookmark to wishlist!")
+            return
+        }
         if(x === 0){
             dispatch(addWishlist({...item}))
             setinWishlist(true)

@@ -6,15 +6,17 @@ const { verifyToken, verifyTokenAndAuthorization, verifyTokenAndAdmin } = requir
 //CREATE
 router.post("/", verifyToken, async(req, res) => {
     const newOrder = new Order({userId:req.body.userId,
+                                customerName:req.body.customerName,
                                 products:req.body.products,
-                                amount:req.body.amount});
+                                amount:req.body.amount,
+                                address:req.body.address});
 
 
     try{
         const savedOrder = await newOrder.save();
-
-        res.status(200).json(savedOrder);
+        res.status(200).json(savedOrder._id);
     }catch(err){
+        console.log(err)
         res.status(500).json(err);
     }
 })

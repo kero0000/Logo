@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
         id:1,
-        img:"https://static.eworldtrade.com/v7/_eu_/uploads/user_products/7/8/product-0545410001539219770-o.jpg",
+        img:"https://ichef.bbci.co.uk/news/976/cpsprodpb/532A/production/_103109212_gymshark2copy.jpg",
         title:"SUMMER SALE",
         desc:"Hurry and get it NOW!",
         bg: "f5fafd",
@@ -9,7 +9,7 @@ export const sliderItems = [
     {
         id:2,
         img:"https://www.dmarge.com/wp-content/uploads/2021/04/best-mens-gym-clothing-brands-quince-920x614.jpg",
-        title:"AUTUMN COLLRECTION",
+        title:"AUTUMN COLLECTION",
         desc:"Dont miss it!",
         bg:"fcf1ed",
     },

@@ -41,12 +41,3 @@ export const register = async(dispatch, userInfo) => {
     }
   }
 
-  export const createOrder = async(accessToken, orderInfo) => {
-    try{
-      const userRequest = axios.create({baseURL:"https://logo-ecommerce-app.herokuapp.com/api/",headers:{token:`Bearer ${accessToken}`}})
-      await userRequest.post("/orders", orderInfo)
-      alert("Order Created!")
-    }catch(err){
-      alert("Order failed!")
-    }
-  }

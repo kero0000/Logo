@@ -11,15 +11,14 @@ import { useSelector } from 'react-redux';
 import Profile from './pages/Profile';
 import AccountSettings from './pages/AccountSettings';
 import Wishlist from './pages/Wishlist';
-import CheckOut from './pages/CheckOut/CheckOut';
 import Orders from './pages/Orders';
+import MainCheckout from './pages/MainCheckout';
 
 const App = ()=>{
   const user = useSelector(state => state.user.currentUser);
 
   return (
     <>
-
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>}/>
@@ -32,7 +31,7 @@ const App = ()=>{
             <Route path='/profile/:username' element={user ? <Profile/> : <Login/>}/>
             <Route path='/profile/:username/settings' element={user ? <AccountSettings/> : <Login/>}/>
             <Route path='/wishlist/:username' element={user ? <Wishlist/> : <Login/>} />
-            <Route path='/checkout/:username' element={user ? <CheckOut/> : <Login/>}/>
+            <Route path='/checkout/:username' element={user ? <MainCheckout/> : <Login/>}/>
             <Route path='/orders/:username' element={user ? <Orders/> : <Login/>}/>
           </Routes>
         </BrowserRouter>
