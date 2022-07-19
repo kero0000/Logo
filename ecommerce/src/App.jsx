@@ -5,7 +5,7 @@ import Product from './pages/Product';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Cart from './pages/Cart';
-import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SuccessPayment from './pages/SuccessPayment';
 import { useSelector } from 'react-redux';
 import Profile from './pages/Profile';
